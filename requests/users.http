@@ -1,0 +1,102 @@
+### Login with default user credentials USER TYPE : RESPONSABLE
+POST {{baseUrl}}/users/login
+Content-Type: application/json
+
+{
+  "email": "samyOffer10@gmail.com",
+  "password": "samy"
+}
+
+> {%
+client.global.set("userToken", response.body.token);
+%}
+
+### Login with default user credentials USER TYPE : HELPER
+POST {{baseUrl}}/users/login
+Content-Type: application/json
+
+{
+  "email": "m@gmail.com",
+  "password": "m"
+}
+
+> {%
+client.global.set("userToken", response.body.token);
+%}
+
+### Login with default user credentials USER TYPE : Responsible
+POST {{baseUrl}}/users/login
+Content-Type: application/json
+
+{
+  "email": "raphael@gmail.com",
+  "password": "raphael"
+}
+
+> {%
+client.global.set("responsibleToken", response.body.token);
+%}
+
+### Register
+POST {{baseUrl}}/users/register
+Content-Type: application/json
+
+{
+  "email": "samyOffer1000@gmail.com",
+  "password": "samy",
+  "firstname": "samy",
+  "lastname": "offer",
+  "picture": "urlDePhoto",
+  "gsm": "0000000050"
+}
+
+> {%
+client.global.set("userToken", response.body.token);
+%}
+
+###  get all the users list
+GET {{baseUrl}}/users/listUsers
+Content-Type: application/json
+Authorization: Bearer {{responsibleToken}}
+
+### confirmRegistration
+POST {{baseUrl}}/users/makeHelper
+Content-Type: application/json
+Authorization: Bearer {{responsibleToken}}
+
+{
+  "idHelper": 38
+}
+
+### Get user image by ID
+GET {{baseUrl}}/users/load/4
+Content-Type: image/png
+
+
+### Get one user by his id
+GET {{baseUrl}}/users/getUser/5
+Content-Type: application/json
+
+### add a new availability date
+POST {{baseUrl}}/availability/add
+Content-Type: application/json
+Authorization: Bearer {{responsibleToken}}
+
+{
+  "date": "2022-05-01T10:30:00",
+  "time_slot": "matin"
+}
+
+
+### update user informations
+POST {{baseUrl}}/users/updateUser
+Content-Type: application/json
+Authorization: Bearer {{userToken}}
+
+{
+  "firstname": "samy",
+  "lastname": "offer",
+  "email": "samyOffer1001@gmail.com",
+  "gsm": "0000000050",
+  "password": "samy"
+}

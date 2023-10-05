@@ -1,0 +1,164 @@
+### change objet status to accept
+POST {{baseUrl}}/objects/accept
+Content-Type: application/json
+Authorization: Bearer {{responsibleToken}}
+
+{
+  "id": 2
+}
+
+
+### change objet status to denie
+POST {{baseUrl}}/objects/deny
+Content-Type: application/json
+Authorization: Bearer {{responsibleToken}}
+
+{
+  "id": 1
+}
+
+
+### change objet status to workshop
+POST {{baseUrl}}/objects/workshop
+Content-Type: application/json
+Authorization: Bearer {{responsibleToken}}
+
+{
+  "id": 2
+}
+
+
+### change objet status to store state
+POST {{baseUrl}}/objects/store
+Content-Type: application/json
+Authorization: Bearer {{responsibleToken}}
+
+{
+  "id": 2
+}
+
+### change objet status to store sale
+POST {{baseUrl}}/objects/sale
+Content-Type: application/json
+Authorization: Bearer {{}}
+
+{
+  "id": 5,
+  "sellingPrice": 3.0
+}
+
+### change objet status to store sold
+POST {{baseUrl}}/objects/sold
+Content-Type: application/json
+Authorization: Bearer {{responsibleToken}}
+
+{
+  "id": 2
+}
+
+
+### change objet status to store sold with a price because previous state was store
+POST {{baseUrl}}/objects/soldInStore
+Content-Type: application/json
+Authorization: Bearer {{responsibleToken}}
+
+{
+  "id": 64,
+  "sellingPrice": 3
+}
+
+
+
+###  get all the objects list
+GET {{baseUrl}}/objects/getObjectList
+Content-Type: application/json
+
+### get one object by his id
+GET {{baseUrl}}/objects/getOneObject?id=2
+
+###  get all the objects list
+GET {{baseUrl}}/objects/myObjects
+Content-Type: application/json
+Authorization: Bearer {{userToken}}
+
+
+
+###  get all the objects in offered state
+GET {{baseUrl}}/objects/getAllObjectsInStore
+Content-Type: application/json
+
+
+###  get all the objects in sold or store state
+GET {{baseUrl}}/objects/getAllObjectsInStoreOrSold
+Content-Type: application/json
+
+
+###  get all the objects list
+GET {{baseUrl}}/objects/getObjectsFromUser?id=3
+Content-Type: application/json
+Authorization: Bearer {{responsibleToken}}
+
+###  get all the objects types
+GET {{baseUrl}}/objects/getAllObjectsType
+Content-Type: application/json
+
+###  get all the availibilities
+GET {{baseUrl}}/objects/getAllAvailibilities
+Content-Type: application/json
+
+###  getNumberOfProposedObjectsByPeriod
+GET {{baseUrl}}/objects/getNumberOfProposedObjectsByPeriod
+Content-Type: application/json
+
+### Get user image by ID
+GET {{baseUrl}}/objects/load/1
+Content-Type: image/png
+
+### create a new object
+POST {{baseUrl}}/objects/createObject
+Content-Type: application/json
+Authorization: Bearer {{userToken}}
+
+{
+  "name": "Test object",
+  "description": "This is a test object",
+  "type_object_id": 1,
+  "availability_id": 1,
+  "phone_owner": "123-456-7890"
+}
+
+### return all the objects with the types selected
+GET {{baseUrl}}/objects/getObjectsSortedByTypes?types=4&types=6&types=1
+Content-Type: application/json
+
+### return all the objects between two dates
+POST {{baseUrl}}/objects/getObjectsBetweenTwoDate
+Content-Type: application/json
+Authorization: Bearer {{responsibleToken}}
+
+{
+  "startDate": "2023-03-01T00:00:00",
+  "endDate": "2023-03-30T23:59:59"
+}
+
+### update the description of an object
+POST {{baseUrl}}/objects/updateObject?id=1
+Content-Type: application/json
+Authorization: Bearer {{responsibleToken}}
+
+{
+  "description": "EEE",
+  "type": 1
+}
+
+
+### change objet status to store sold
+POST {{baseUrl}}/objects/withdraw
+Content-Type: application/json
+Authorization: Bearer {{responsibleToken}}
+
+{
+  "id": 60
+}
+
+

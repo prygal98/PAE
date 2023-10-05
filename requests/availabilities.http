@@ -1,0 +1,14 @@
+###  get all the availabilities list
+GET {{baseUrl}}/availability/getAvailabilitiesList
+Content-Type: application/json
+
+
+### add a new availability date
+POST {{baseUrl}}/availability/add
+Content-Type: application/json
+Authorization: Bearer {{responsibleToken}}
+
+{
+  "date": "2022-05-01T10:30:00",
+  "time_slot": "matin"
+}

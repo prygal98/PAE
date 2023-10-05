@@ -1,0 +1,19 @@
+###  get all the notifications proposed
+GET {{baseUrl}}/notification/getAllNotificationsProposed
+Content-Type: application/json
+Authorization: Bearer {{responsibleToken}}
+
+
+###  get all the notifications proposed
+POST {{baseUrl}}/notification/markAsRead
+Content-Type: application/json
+Authorization: Bearer
+
+{
+  "id": 2
+}
+
+###  get all my notifications
+GET {{baseUrl}}/notification/getAllMyNotifications
+Content-Type: application/json
+Authorization: Bearer {{userToken}}
