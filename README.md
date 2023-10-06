@@ -15,10 +15,10 @@
 <img src="https://img.shields.io/badge/JSON-000000.svg?style&logo=JSON&logoColor=white" alt="JSON" />
 <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style&logo=openjdk&logoColor=white" alt="java" />
 </p>
-<img src="https://img.shields.io/github/license/SamyOffer/PAE?style&color=5D6D7E" alt="GitHub license" />
-<img src="https://img.shields.io/github/last-commit/SamyOffer/PAE?style&color=5D6D7E" alt="git-last-commit" />
-<img src="https://img.shields.io/github/commit-activity/m/SamyOffer/PAE?style&color=5D6D7E" alt="GitHub commit activity" />
-<img src="https://img.shields.io/github/languages/top/SamyOffer/PAE?style&color=5D6D7E" alt="GitHub top language" />
+<img src="https://img.shields.io/github/license/prygal98/Projet_application_entreprise?style&color=5D6D7E" alt="GitHub license" />
+<img src="https://img.shields.io/github/last-commit/prygal98/Projet_application_entreprise?style&color=5D6D7E" alt="git-last-commit" />
+<img src="https://img.shields.io/github/commit-activity/m/prygal98/Projet_application_entreprise?style&color=5D6D7E" alt="GitHub commit activity" />
+<img src="https://img.shields.io/github/languages/top/prygal98/Projet_application_entreprise?style&color=5D6D7E" alt="GitHub top language" />
 </div>
 
 ---
@@ -80,7 +80,7 @@ When the project is installed, the dependencies are downloaded.
 
 1. Clone the PAE repository:
 ```sh
-git clone https://github.com/SamyOffer/PAE
+git clone https://github.com/prygal98/Projet_application_entreprise
 ```
 
 2. Change to the project directory and install the dependencies:
